@@ -34,5 +34,6 @@ Chef::Log.info "SPHINX HOST: #{default[:sphinx][:host]}"
 
 # Set apps key to all available apps if empty
 if default[:sphinx][:apps].empty?
-  default[:sphinx][:apps] = node[:engineyard][:environment][:apps].map{|a| a[:name]}
+  default[:sphinx][:apps] = ["dataanalysis"]
+  #default[:sphinx][:apps] = node[:engineyard][:environment][:apps].map{|a| a[:name]}
 end
